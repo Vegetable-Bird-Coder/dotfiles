@@ -1,3 +1,5 @@
+vim.env.PATH = "/opt/homebrew/bin:/usr/local/bin:" .. vim.env.PATH
+
 -- =======================================================================
 -- [1] 基础设置 (Options)
 -- =======================================================================
@@ -341,9 +343,9 @@ vim.keymap.set('n', '<leader>h', ':nohlsearch<CR>', { silent = true, desc = '清
 
 -- 自动切输入法到英文 (仅 macOS)
 if vim.fn.has("mac") == 1 then
-  vim.api.nvim_create_autocmd({"VimEnter", "InsertLeave", "WinEnter", "FocusGained"}, {
+  vim.api.nvim_create_autocmd({"VimEnter", "InsertLeave", "WinEnter", "BufEnter", "FocusGained"}, {
     callback = function()
-      os.execute("im-select com.apple.keylayout.ABC")
+      vim.fn.system("im-select com.apple.keylayout.US")
     end,
   })
 end

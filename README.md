@@ -10,11 +10,15 @@
 | Starship | 命令提示符 | `starship/` |
 | Yazi | 终端文件管理器 | `yazi/` |
 | Neovim | 代码编辑器 | `nvim/` |
+| zsh-autosuggestions | 历史记录自动补全 | `~/.zshrc` |
+| zsh-syntax-highlighting | 命令语法高亮 | `~/.zshrc` |
+| fzf | 模糊搜索（历史/文件） | `~/.zshrc` |
 
 ## 依赖安装
 
 ```bash
-brew install ghostty starship yazi neovim zoxide fd poppler ripgrep
+brew install ghostty starship yazi neovim zoxide fd poppler ripgrep \
+  zsh-autosuggestions zsh-syntax-highlighting fzf
 ```
 
 ---
